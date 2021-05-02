@@ -1,0 +1,23 @@
+%º∆À„Ω«∂»
+
+function beta = caculatebeta(s,e)
+dy = e(2) - s(2);
+dx = e(1) - s(1);
+if dx==0
+    beta=pi/2;
+else
+    angle = atan(dy/dx); 
+    if(dx < 0)
+        if(dy > 0)
+            angle = pi - abs(angle);
+        else
+            angle = pi + abs(angle);
+        end
+    else
+        if(dy < 0)
+            angle = 2*pi- abs(angle);
+        end
+    end
+end
+
+
